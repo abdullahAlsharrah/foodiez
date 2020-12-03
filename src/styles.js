@@ -92,3 +92,13 @@ export const DetailWrapper = styled.div`
     margin-left: 50%;
   }
 `;
+export const Container = styled.div`
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+`;

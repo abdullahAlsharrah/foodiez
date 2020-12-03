@@ -3,6 +3,7 @@ import IngredientItem from "./IngredientItem";
 import { observer } from "mobx-react";
 import SearchBar from "./SearchBar";
 import { useState } from "react";
+import { Container } from "../styles";
 
 const IngredientList = ({ ingredients }) => {
   const [query, setQuery] = useState("");
@@ -18,7 +19,7 @@ const IngredientList = ({ ingredients }) => {
   return (
     <>
       <SearchBar setQuery={setQuery} />
-      {ingredientsList}
+      <Container>{ingredientsList}</Container>
     </>
   );
 };

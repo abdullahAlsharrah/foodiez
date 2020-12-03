@@ -2,11 +2,13 @@ import { makeObservable, observable, action } from "mobx";
 import axios from "axios";
 
 class CategoryStore {
+  loading = true;
   categories = [];
 
   constructor() {
     makeObservable(this, {
       categories: observable,
+      loading: observable,
     });
   }
 
@@ -14,6 +16,7 @@ class CategoryStore {
     try {
       const response = await axios.get("http://localhost:8000/categories");
       this.categories = response.data;
+      this.loading = false;
     } catch (error) {
       console.log(error);
     }
