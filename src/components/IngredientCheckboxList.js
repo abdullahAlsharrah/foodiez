@@ -1,10 +1,9 @@
-import IngredientItem from "./IngredientItem";
-// import ingredientStore from "../stores/ingredientStore";
 import { observer } from "mobx-react";
 import SearchBar from "./SearchBar";
 import { useState } from "react";
 import { Container } from "../styles";
 import AddIngredientButton from "./buttons/AddIngredientButton";
+import IngredientCheckBoxItem from "./IngredientCheckBoxItem";
 
 const IngredientList = ({ ingredients }) => {
   const [query, setQuery] = useState("");
@@ -14,7 +13,7 @@ const IngredientList = ({ ingredients }) => {
       ingredient.name.toLowerCase().includes(query.toLowerCase())
     )
     .map((ingredient) => (
-      <IngredientItem ingredient={ingredient} key={ingredient.id} />
+      <IngredientCheckBoxItem ingredient={ingredient} key={ingredient.id} />
     ));
 
   return (

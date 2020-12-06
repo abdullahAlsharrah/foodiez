@@ -1,5 +1,22 @@
 import styled, { createGlobalStyle } from "styled-components";
+export const UpdateButtonStyled = styled.p`
+  text-align: center;
+  cursor: pointer;
+  color: ${(props) => props.theme.second};
 
+  &:hover {
+    color: ${(props) => props.theme.second};
+  }
+`;
+export const CreateButtonStyled = styled.button`
+  color: ${(props) => props.theme.backgroundColor};
+  background-color: ${(props) => props.theme.mainColor};
+
+  &:hover {
+    color: ${(props) => props.theme.mainColor};
+    background-color: ${(props) => props.theme.backgroundColor};
+  }
+`;
 export const SearchBarStyled = styled.input`
   padding: 0.5rem;
   margin: 1rem auto;
@@ -65,6 +82,7 @@ export const DetailWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
   width: 80%;
+  height: 40%;
 
   img {
     width: 40%;

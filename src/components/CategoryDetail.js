@@ -10,12 +10,11 @@ const CategoryDetail = () => {
   const category = categoryStore.categories.find(
     (_category) => _category.slug === categoryName
   );
-  if (!category) return null;
   const ingredients = category.ingredients.map((ingredient) =>
     ingredientStore.getIngredientById(ingredient.id)
   );
 
-  // if (!category) return <Redirect to="/categories" />;
+  if (!category) return <Redirect to="/categories" />;
 
   //
   return (
