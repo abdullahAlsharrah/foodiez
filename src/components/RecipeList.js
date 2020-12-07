@@ -4,6 +4,7 @@ import { observer } from "mobx-react";
 import { Container } from "../styles";
 import AddRecipeButton from "./buttons/AddRecipeButton";
 import SearchBar from "./SearchBar";
+import { useState } from "react";
 
 const RecipeList = () => {
   const [query, setQuery] = useState("");
