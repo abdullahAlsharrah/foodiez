@@ -8,7 +8,7 @@ const RecipeModal = ({ isOpen, closeModal, oldRecipe }) => {
   export default SelectPage;
   const [recipe, setRecipe] = useState(
     oldRecipe
-      ? oldProduct
+      ? oldRecipe
       : {
           name: "",
           description: "",
