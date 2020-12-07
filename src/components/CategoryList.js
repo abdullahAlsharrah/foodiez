@@ -3,6 +3,8 @@ import categoryStore from "../stores/categoryStore";
 import { observer } from "mobx-react";
 import { Container } from "../styles";
 import AddCategoryButton from "./buttons/AddCategoryButton";
+import { useState } from "react";
+import SearchBar from "./SearchBar";
 
 const CategoryList = () => {
   const [query, setQuery] = useState("");
